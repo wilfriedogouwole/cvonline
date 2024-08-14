@@ -12,13 +12,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-export default async function pagedashboard() {
+export default async function Pagedashboard() {
 /* recuperer le userid*/
 
 const {userId} = auth()
 if (!userId) {
 redirect("/")
 }
+
+const {sessionId} = auth()
+if (!sessionId) {
+return null
+}
+
+console.log(sessionId);
 
 console.log(userId);
 
@@ -33,6 +40,7 @@ console.log(user);
 
 <h1> Bienvenue {user?.firstName} {user?.lastName}</h1>
 <p> Email: {user?.emailAddresses[0].emailAddress}</p>
+<p>Session : {sessionId}</p>
 
 
 
