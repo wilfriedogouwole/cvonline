@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { addUserToDatabase, getUserFromDatabase } from "@/service/userService";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,16 +33,31 @@ console.log(userId);
 const user = await currentUser()
 console.log(user);
 
+
+if(userId &&user){
+  const fullName = `${user.firstName} ${user.lastName}` || "";
+  const email = user.emailAddresses[0].emailAddress || "";
+  const image= user.imageUrl || "";
+
+  await addUserToDatabase(userId, fullName, email, image);
+}
  
+const data= await getUserFromDatabase(userId);
+
       return (
+        
         <div className="my-5" >
           <div className="flex flex-col items-center justify-center my-5  ">
-      <Image className="rounded-full" src={user?.imageUrl as string} alt="clerk logo" width={100} height={100} />
+      {/*<Image className="rounded-full" src={user?.imageUrl as string} alt="clerk logo" width={100} height={100} />
 
 <h1> Bienvenue {user?.firstName} {user?.lastName}</h1>
 <p> Email: {user?.emailAddresses[0].emailAddress}</p>
 <p>Session : {sessionId}</p>
+*/}
 
+<Image className="rounded-full" src={data?.image as string} alt="clerk logo" width={100} height={100} />
+<h1> Bienvenue {data?.name}</h1>
+<p> Email: {data?.email}</p>
 
 
 </div>

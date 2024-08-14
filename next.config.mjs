@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 images: {
+  
 remotePatterns: [
 {
   protocol: "https",
@@ -8,6 +9,24 @@ remotePatterns: [
   pathname: "**",  
 
 },
+
+{
+  protocol: "https",
+  hostname: "mail.google.com",
+  pathname: "**",  
+
+},
+
+{
+  protocol: "https",
+  hostname: "mail.google.com",
+  pathname: "**",  
+
+},
+
+
+
+
 ]
 
 },

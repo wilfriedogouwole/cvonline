@@ -17,7 +17,7 @@ if(userId){
 </Link>
 <Link href="/sign-up">
 
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded"> Déconnexion</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded"> Inscription </button>
 </Link>
    
    </section>
