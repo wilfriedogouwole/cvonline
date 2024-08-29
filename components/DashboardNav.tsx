@@ -1,7 +1,7 @@
-"use client"
-import { CircleUser, Menu, Package2, Search } from "lucide-react";
+import { Menu, Package2, Search } from "lucide-react";
 import Link from "next/link";
 
+import { SignOutButton } from "@/components/SignOutButton";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -13,9 +13,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { SignOutButton } from "@clerk/nextjs";
+import Imageprofile from "./Imageprofile";
+
 export default function DashboardNav() { 
-     
+
     return (
           <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 mb-10">
             <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
@@ -113,7 +114,7 @@ export default function DashboardNav() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="secondary" size="icon" className="rounded-full">
-                    <CircleUser className="h-5 w-5" />
+                    <Imageprofile />
                     <span className="sr-only">Toggle user menu</span>
                   </Button>
                 </DropdownMenuTrigger>
@@ -123,14 +124,11 @@ export default function DashboardNav() {
                   <DropdownMenuItem>Reglages</DropdownMenuItem>
                   <DropdownMenuItem>Aide</DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Déconnexion</DropdownMenuItem>
+                  <SignOutButton />
                 </DropdownMenuContent>
               </DropdownMenu>
-              <div> <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 mb-4 rounded mt-5">
   <SignOutButton />
- </button></div>
-            </div>
-          </header>
+</div>          </header>
      
       )
     }

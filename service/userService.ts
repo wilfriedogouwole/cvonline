@@ -1,29 +1,32 @@
 import { prisma } from "@/lib/db";
 
 
-export const addUserToDatabase = async (clerkUserId: string, name: string,
-     email: string, image:string) => {
+export const addUserToDatabase = async (clerkUserId: string, name: string, email: string, image:string) => {
 
     try {
-        
+
         const user = await prisma.user.upsert({
-            where: {
-                clerkUserId: clerkUserId,
+            
+            where: {clerkUserId},
+
+            update: {
+                name: name,
+                email: email,
+                image: image,
+                clerkUserId,
             },
             create: {
                 name: name,
                 email: email,
                 image: image,
-                clerkUserId: clerkUserId,
+                clerkUserId,
             },
-            update: {
-                name: name,
-                email: email,
-                image: image,
-                clerkUserId: clerkUserId,
-            },
+           
           });
 
+          console.log("User created successfully:", user);
+
+        return user;
 
     } catch (error) {
         console.log('une erreur est survenue lors de la création de l\'untilisateur', error)
@@ -33,15 +36,50 @@ export const addUserToDatabase = async (clerkUserId: string, name: string,
     }
 
     export const getUserFromDatabase = async (clerkUserId: string) => {
+
+      console.log("Clerk User ID:", clerkUserId);
+      
         try {
+            
             const user = await prisma.user.findUnique({
                 where: {
-                    clerkUserId: clerkUserId,
+                    clerkUserId
                 },
               });
               return user;
+
         } catch (error) {
             console.log('une erreur est survenue lors de la récupération de l\'utilisateur dans la base de données', error)
             throw error;
         } 
+      }
+
+
+
+      export const deleteUserFromDatabase = async (clerkUserId: string) => {
+
+        console.log("Clerk User ID:", clerkUserId);
+  
+        try {
+          const result = await prisma.$transaction(async (prisma) => {
+            // Supprimez d'abord les notes de l'utilisateur
+            await prisma.notes.deleteMany({
+              where: { userId: clerkUserId }
+            });
+      
+            // Ensuite, supprimez l'utilisateur
+            
+            const deletedUser = await prisma.user.delete({
+              where: { clerkUserId }
+            });
+      
+            return deletedUser;
+          });
+      
+          console.log("User and related data deleted successfully:", result);
+          return result;
+        } catch (error) {
+          console.error('Une erreur est survenue lors de la suppression de l\'utilisateur et de ses données associées', error);
+          throw error;
+        }
       }

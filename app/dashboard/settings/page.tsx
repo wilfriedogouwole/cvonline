@@ -1,4 +1,4 @@
-
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,67 +8,74 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { updateUserFromDatabase } from "@/service/userService";
+import Image from "next/image";
 
-export default function PageSetting() {
+
+
+export default  function PageSetting() {
+  
   return (
     <div className="mx-auto" >
           <h1 className=" flex justify-center text-3xl font-semibold">Réglages</h1>
         <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
-          <nav
-            className="grid gap-4 text-sm text-muted-foreground" x-chunk="dashboard-04-chunk-0"
-          >
-           
-          </nav>
-          <div className="flex justify-center flex-col gap-6">
-            <Card x-chunk="dashboard-04-chunk-1">
-              <CardHeader>
-                <CardTitle>Store Name</CardTitle>
-                <CardDescription>
-                  Used to identify your store in the marketplace.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form>
-                  <Input placeholder="Store Name" />
-                </form>
-              </CardContent>
-              <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
-            <Card x-chunk="dashboard-04-chunk-2">
-              <CardHeader>
-                <CardTitle>Plugins Directory</CardTitle>
-                <CardDescription>
-                  The directory within your project, in which your plugins are
-                  located.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="flex flex-col gap-4">
-                  <Input
-                    placeholder="Project Name"
-                    defaultValue="/content/plugins"
-                  />
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="include" defaultChecked />
-                    <label
-                      htmlFor="include"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Allow administrators to change the directory.
-                    </label>
-                  </div>
-                </form>
-              </CardContent>
-              <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
+      
+    <section className="border border-gray-200 rounded-md p-3">
+
+      <p className="text-lg text-muted-foreground">Vos parametres de profil</p>
+      <div className="w-12 h-[1px] bg-white my-2 mx-1"></div>
+
+      <form action={updateUserFromDatabase}>
+        <input type="hidden" name="id" value="" />
+
+        <Card>
+
+          <CardHeader>
+            <CardTitle>Parametres globals</CardTitle>
+            <CardDescription>Modifier vos informations puis sauvegarder.</CardDescription>
+          </CardHeader>
+
+          <CardContent>
+          
+              <Image 
+                src={""} 
+                alt=""
+                className="w-16 h-16 object-contain mb-4" 
+                width={100}
+                height={100}
+              />
             
-          </div>
+            <div className="space-y-1 mb-2">
+              <Label htmlFor="idUser">ID</Label>
+              <Input disabled name="idUser" type="text" id="idUser" placeholder="Votre e-mail" defaultValue="" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="name">Nom</Label>
+              <Input name="name" type="text" id="name" placeholder="Votre nom" defaultValue="" />
+            </div>
+            <div className="space-y-1 mt-2">
+              <Label htmlFor="email">Email</Label>
+              <Input disabled name="email" type="email" id="email" placeholder="Votre e-mail" defaultValue="" />
+            </div>
+          </CardContent>
+
+          <CardFooter>
+            <Button type="submit">Modifier</Button>
+          </CardFooter>
+        </Card>
+
+      </form>
+      {/*}
+      <form action={deleteUser}>
+      <input type="hidden" name="id" value={user?.id}/>
+        <Button className="bg-red-500 mx-1 my-2 hover:bg-red-600 text-white">Supprimer mon compte</Button>
+      </form>
+*/}
+    </section>
+
+            
         </div>
     </div>
   )

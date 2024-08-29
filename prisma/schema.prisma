@@ -13,7 +13,7 @@ datasource db {
 model User {
   id            String    @id @default(cuid())
   name          String?
-  email         String @unique
+  email         String
   emailVerified DateTime?
   image         String?
   createdAt     DateTime  @default(now())
@@ -21,7 +21,22 @@ model User {
   clerkUserId   String?  @unique
   accounts      Account[]
   sessions      Session[]
+  Notes Notes[]
 }
+
+
+model Notes {
+  id String @id @unique @default(cuid())
+  title String?
+  description String?
+  completed Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user User @relation(fields: [userId], references: [clerkUserId])
+  userId String 
+}
+
+
 
 
 model Account {

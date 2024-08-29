@@ -1,131 +1,107 @@
-"use client"
-import { CircleUser, Menu, Package2, Search } from "lucide-react";
-import Link from "next/link";
+'use client'
 
-import { Button } from "@/components/ui/button";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SignInButton } from "@clerk/nextjs";
+import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import Image from "next/image";
+import { DarkModenav } from "./DarkModenav";
+import { Button } from "./ui/button";
 
-export default function Nav() { 
-     
-    return (
-          <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 mb-10">
-            <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-              <Link
-                href="#"
-                className="flex items-center gap-2 text-lg font-semibold md:text-base"
-              >
-                <Package2 className="h-6 w-6" />
-                <span className="sr-only">Des.OGOU</span>
-              </Link>
-              <Link
-                href="/"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Accueil
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Exemple CV 
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Exemple lettre de motivation
-              </Link>
-              <Link
-                href="/dashboard/settings"
-                className="text-foreground transition-colors hover:text-foreground"
-              >
-              Connexion
-              </Link>
-            </nav>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="shrink-0 md:hidden"
-                >
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle navigation menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <nav className="grid gap-6 text-lg font-medium">
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2 text-lg font-semibold"
-                  >
-                    <Package2 className="h-6 w-6" />
-                    <span className="sr-only">Des.OGOUc</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    Acceuil
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-               
-                    Exemple CV
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    Exemple lettre de motivation
-                  </Link>
-                  <Link href="/dashboard/settings" className="hover:text-foreground">
-                  
-                    Connexion
-                  </Link>
-                </nav>
-              </SheetContent>
-            </Sheet>
-            <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
-              <form className="ml-auto flex-1 sm:flex-initial">
-                <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    type="search"
-                    placeholder="Search products..."
-                    className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-                  />
-                </div>
-              </form>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="secondary" size="icon" className="rounded-full">
-                    <CircleUser className="h-5 w-5" />
-                    <span className="sr-only">Toggle user menu</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>Profil</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Support</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Déconnexion</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          </header>
-     
-      )
-    }
+
+
+export default function Nav() {
+
+  const menuItems = [
+    "Exemple de CV",
+    "Exemple lettre de motivation",
+    "Conseils",
+    "Nous contacter",
+    "Connexion",
+    
+  ];
+ 
+  return (
+    <Navbar position="sticky" disableAnimation isBordered>
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle />
+      </NavbarContent>
+
+      <NavbarContent className="sm:hidden pr-3" justify="center">
+        <NavbarBrand>
+        <Link href="http://localhost:3000/">
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarBrand>
+        <Link href="/">
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+          </Link>
+        </NavbarBrand>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+          Exemple de CV
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page" color="warning">
+          Exemple lettre de motivation
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+          Conseils
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Nous contacter</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button className="bg-red-950 hover:bg-orange-600 text-white" >
+          <SignInButton/>
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+       
+<DarkModenav/>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color={
+                index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
+              }
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

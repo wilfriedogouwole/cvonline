@@ -12,6 +12,27 @@ remotePatterns: [
 
 {
   protocol: "https",
+  hostname: "modele-cv.com",
+  pathname: "**",  
+
+},
+
+{
+  protocol: "https",
+  hostname: "cdn-ilanoin.nitrocdn.com",
+  pathname: "**",  
+
+},
+
+{
+  protocol: "https",
+  hostname: "derrickogouwole.fr",
+  pathname: "**",  
+
+},
+
+{
+  protocol: "https",
   hostname: "mail.google.com",
   pathname: "**",  
 

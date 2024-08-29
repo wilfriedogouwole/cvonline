@@ -67,3 +67,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .pt-250 {
+    padding-top: 250px;
+  }
+}
