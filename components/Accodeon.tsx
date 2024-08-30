@@ -33,9 +33,8 @@ export default function Accodeon() {
             src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
           />
         }
-        title="Accès à des modèles professionnels
-"
-      >"
+        title="Accès à des modèles professionnels">
+          
         {"Vous avez accès à une variété de modèles qui respectent les tendances actuelles et sont adaptés à différents secteurs d'activité."
 
 }

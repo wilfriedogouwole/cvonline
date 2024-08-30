@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { updateUserFromDatabase } from "@/service/userService";
 import Image from "next/image";
 
 
@@ -27,7 +26,7 @@ export default  function PageSetting() {
       <p className="text-lg text-muted-foreground">Vos parametres de profil</p>
       <div className="w-12 h-[1px] bg-white my-2 mx-1"></div>
 
-      <form action={updateUserFromDatabase}>
+      <form action="">
         <input type="hidden" name="id" value="" />
 
         <Card>

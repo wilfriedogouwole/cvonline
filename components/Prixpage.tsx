@@ -45,7 +45,7 @@ const PrixPage = () => {
                         </div>
 
                         <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8'>
-                        Choisissez parmi nos forfaits abordables et commencez dès aujourd'hui.                        </p>
+                       {`Choisissez parmi nos forfaits abordables et commencez dès aujourd'hui.`}                        </p>
 
                         <PricingSection tiers={tiers} />
 

@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css'; // Importation du style par défaut
 const TextEditor = () => {
   const [editorHtml, setEditorHtml] = useState('');
 
-  const handleChange = (html) => {
+  const handleChange = (html:any) => {
     setEditorHtml(html);
   };
 

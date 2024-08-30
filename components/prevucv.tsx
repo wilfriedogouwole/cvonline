@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
-    Bell,
-    Package2
+  Bell,
+  Package2
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,7 +27,11 @@ export function Prevucv() {
         sexe: '',
         siteWeb: '',
         linkedin: '',
-        profil: ''
+        profil: '',
+        dateNaissance: '',
+        lieuNaissance: '',
+        nationalite: '',
+        etatCivil: '',  
       });
     
       const [extraFields, setExtraFields] = useState<string[]>([]);

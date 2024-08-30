@@ -1,10 +1,13 @@
 "use client";
-import TextEditor from "@/components/TextEditor";
 import "@/styles/style.css";
 import { Accordion, AccordionItem, Button } from "@nextui-org/react";
 import { CirclePlus } from "lucide-react";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import { useState } from 'react';
+
+// Dynamically import TextEditor with SSR disabled
+const TextEditor = dynamic(() => import("@/components/TextEditor"), { ssr: false });
 
 export default function EditVC() {
   const [cvData, setCvData] = useState({
@@ -20,7 +23,11 @@ export default function EditVC() {
     sexe: '',
     siteWeb: '',
     linkedin: '',
-    profil: ''
+    profil: '',
+    dateNaissance: '',
+    lieuNaissance: '',
+    nationalite: '',
+    etatCivil: '',
   });
 
   const [extraFields, setExtraFields] = useState<string[]>([]);
@@ -38,6 +45,7 @@ export default function EditVC() {
   };
 
   return (
+    <>
     <div className="container">
       <div className="form-section">
         <h2>Formulaire CV</h2>
@@ -278,7 +286,7 @@ export default function EditVC() {
 Profil              </h3>
               <p className="text-sm text-justify text-muted-foreground">
            
-Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.
+{`Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.`}
 
      </p>
             </div>
@@ -287,7 +295,7 @@ Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer 
 Formation              </h3>
               <p className="text-sm text-justify text-muted-foreground">
            
-Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.
+              {`Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.`}
 
      </p>
      </div>
@@ -296,5 +304,6 @@ Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer 
         </div>
       </div>
     </div>
+    </>
   );
 }
