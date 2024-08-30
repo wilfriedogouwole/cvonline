@@ -1,8 +1,9 @@
 'use client'
-
+import "@/styles/styleheader.css";
 import { SignInButton } from "@clerk/nextjs";
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import Image from "next/image";
+import "../styles/styleheader.css";
 import { DarkModenav } from "./DarkModenav";
 import { Button } from "./ui/button";
 
@@ -20,7 +21,7 @@ export default function Nav() {
   ];
  
   return (
-    <Navbar position="sticky" disableAnimation isBordered>
+    <Navbar className=" flex items-center text-center justify-center" position="sticky" disableAnimation isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
@@ -34,11 +35,6 @@ export default function Nav() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
-        <Link href="/">
-        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
-          </Link>
-        </NavbarBrand>
         <NavbarItem>
           <Link color="foreground" href="#">
           Exemple de CV
@@ -49,12 +45,19 @@ export default function Nav() {
           Exemple lettre de motivation
           </Link>
         </NavbarItem>
+        <NavbarBrand>
+        <Link href="/">
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+          </Link>
+        </NavbarBrand>
+
         <NavbarItem>
           <Link color="foreground" href="#">
           Conseils
           </Link>
         </NavbarItem>
       </NavbarContent>
+      
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
