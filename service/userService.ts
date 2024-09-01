@@ -1,7 +1,9 @@
+'use server'
 import { prisma } from "@/lib/db";
-
+import { revalidatePath } from "next/cache";
 
 export const addUserToDatabase = async (clerkUserId: string, name: string, email: string, image:string) => {
+
 
     try {
 
@@ -54,8 +56,6 @@ export const addUserToDatabase = async (clerkUserId: string, name: string, email
         } 
       }
 
-
-
       export const deleteUserFromDatabase = async (clerkUserId: string) => {
 
         console.log("Clerk User ID:", clerkUserId);
@@ -70,10 +70,11 @@ export const addUserToDatabase = async (clerkUserId: string, name: string, email
             // Ensuite, supprimez l'utilisateur
             
             const deletedUser = await prisma.user.delete({
-              where: { clerkUserId }
+              where: {clerkUserId
+
+               }
             });
-      
-            return deletedUser;
+      revalidatePath('/');
           });
       
           console.log("User and related data deleted successfully:", result);

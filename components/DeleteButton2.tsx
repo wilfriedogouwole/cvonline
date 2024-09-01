@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useClerk } from "@clerk/nextjs";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export default function DeleteButton2({ userId }: { userId: string }) {
   const [isDeleting, setIsDeleting] = useState(false);
@@ -23,7 +24,7 @@ export default function DeleteButton2({ userId }: { userId: string }) {
 
         const result = await response.json();
         if (result.success) {
-          router.push('http://localhost:3000'); // Redirection vers la page d'accueil
+          toast.success ('Compte supprimé avec succès');
         } else {
           throw new Error(result.message || 'Failed to delete user');
         }
@@ -38,7 +39,10 @@ export default function DeleteButton2({ userId }: { userId: string }) {
 
   const handleClick = async () => {
     await handleDelete();
+    toast.success ('Compte supprimé avec succès');
+
     signOut();
+
   };
   
 
