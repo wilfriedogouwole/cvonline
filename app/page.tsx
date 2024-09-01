@@ -43,7 +43,7 @@ if(userId){
             radius: "full",
             variant: "shadow",
           })}
-          href={siteConfig.links.docs}
+          href={siteConfig.links.connexion}
         >
                     <BookText size={20} />
 

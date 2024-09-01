@@ -1,6 +1,6 @@
 'use client'
 import "@/styles/styleheader.css";
-import { SignInButton } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import Image from "next/image";
 import "../styles/styleheader.css";
@@ -64,9 +64,14 @@ export default function Nav() {
           <Link href="#">Nous contacter</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button className="bg-red-950 hover:bg-orange-600 text-white" >
-          <SignInButton/>
-          </Button>
+            <SignedOut>
+            <Button className="bg-red-950 hover:bg-orange-600 text-white" >
+              <SignInButton/>
+              </Button>
+            </SignedOut>
+            <SignedIn>
+              <UserButton/>
+            </SignedIn>
         </NavbarItem>
         <NavbarItem>
        
