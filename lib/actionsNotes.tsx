@@ -65,7 +65,7 @@ try {
   }
 }
   
-  export const deleteNote = async(formData:FormData)=> {
+  export const  deleteNote = async(formData:FormData)=> {
     const id = formData.get('id') as string;
     await prisma.notes.delete({
       where: {id}
