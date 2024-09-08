@@ -45,7 +45,7 @@ export default function RootLayout({
 								title="nextui.org homepage"
 							/>
 								<div className="mx-auto flex flex-nowrap space-x-2 justify-center items-center content-center">
-                <Image src={"https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png"} 
+                <Image src={"/images/logo_blanc.png"} 
                 alt="Logo" width={250} height={100} className=" w-[250px] h-[100%] relative z-[5] -m-4" /></div><br/>
 								<div className=" mx-auto mb-4 flex flex-nowrap space-x-2 justify-center items-start content-center">
 					<Link isExternal href={siteConfig.links.Linkedin} aria-label="Linkedin" 
@@ -59,7 +59,7 @@ export default function RootLayout({
 								<Divider />
 					        <div className="text-center justify-center items-center">
 								<p className="text-default-600 py-2">Derrick Ogouwole,
-								<span className="text-primary"> Tous Droits RÃ©servÃ©</span> </p>
+								<span className="text-primary"> Tous Droits Reservés</span> </p>
                 </div>
 						</footer>
             </ThemeProvider>
