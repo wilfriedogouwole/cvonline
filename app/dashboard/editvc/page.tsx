@@ -34,7 +34,7 @@ export default function EditVC() {
 
   const [extraFields, setExtraFields] = useState<string[]>([]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setCvData(prevData => ({
       ...prevData,
