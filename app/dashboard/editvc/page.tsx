@@ -28,6 +28,8 @@ export default function EditVC() {
     lieuNaissance: '',
     nationalite: '',
     etatCivil: '',
+    motivation:''
+    
   });
 
   const [extraFields, setExtraFields] = useState<string[]>([]);
@@ -238,9 +240,15 @@ export default function EditVC() {
           aria-label="Description" title="Profil">
             <div className="personal-info">
               <div className="input-group">
-                <label htmlFor="photo">Description:</label>
-                <TextEditor />
-              </div>
+                <label htmlFor="motivation">Motivation</label>
+                <textarea
+                  id="motivation"
+                  name="motivation"
+                  value={cvData.motivation}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full p-2 border rounded"
+                />              </div>
            </div>
                 </AccordionItem  >    
         </Accordion>
@@ -250,11 +258,11 @@ export default function EditVC() {
 
       <div className="preview-section">
         <h2>Prévisualisation du CV</h2>
-        <div className="cv-card flex flex-1">
+        <div className="cv-card flex flex-1 ">
         
           <div className="cv-info bg-orange-400 px-2 ">
-         {/*} <Image src={cvData.photo} alt="Photo" width="100" height="100" className="cv-photo" />
-          <p>{cvData.profil}</p> */}
+          <Image src={cvData.photo} alt="Photo" width="100" height="100" className="cv-photo" />
+          <p>{cvData.profil}</p> 
            <Image src={"https://cdn-ilanoin.nitrocdn.com/teqXLpLIVZeOqSQxzwmkSxDOZifIFLwA/assets/images/optimized/rev-2c95817/derrickogouwole.fr/wp-content/uploads/2024/01/derrick-refaire-1-2.webp"} alt="Photo" width="70" height="70" className="cv-photo" />
           <p><strong> Nom: </strong> {cvData.prenom} {cvData.nom}</p>
             <p><strong>Email:</strong> {cvData.email}</p>
@@ -273,6 +281,7 @@ export default function EditVC() {
             {extraFields.includes('nationalite') && <p><strong>Nationalité:</strong> {cvData.nationalite}</p>}
             {extraFields.includes('etatCivil') && <p><strong>État civil:</strong> {cvData.etatCivil}</p>}
           </div>
+
           <main className="flex  bg-white shadow-md flex-col p-2 lg:gap-2 lg:p-2">
           <div className="flex items-center">
             <h1 className="text-lg font-semibold md:text-xl "> {cvData.prenom} {cvData.nom}
@@ -282,16 +291,14 @@ export default function EditVC() {
             className="flex flex-col gap-5  rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1"
           >
             <div className="flex flex-col gap-1 text-center">
-              <h3 className="text-md font-bold tracking-tight text-start">
-Profil              </h3>
-              <p className="text-sm text-justify text-muted-foreground">
-           
-{`Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.`}
-
-     </p>
+              <h3 className="text-md font-bold tracking-tight text-start text-slate-700">
+                Profil              </h3>
+                <p className="text-sm text-justify text-muted-foreground">
+                {cvData.motivation}
+              </p>      
             </div>
             <div className="flex flex-col gap-1 text-center">
-              <h3 className="text-md font-bold tracking-tight text-start">
+              <h3 className="text-md font-bold tracking-tight text-start text-slate-700" >
 Formation              </h3>
               <p className="text-sm text-justify text-muted-foreground">
            

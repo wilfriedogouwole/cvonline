@@ -103,7 +103,7 @@ return (
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
             <Link href="/dashboard/notes">
-              <Button className="red-button bg-red-700">Ajouter des notes</Button>
+              <Button className="red-button bg-red-600  hover:bg-red-700 text-white">Ajouter des notes</Button>
             </Link>
           </CardFooter>
        </Card>   
@@ -118,7 +118,7 @@ return (
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
             <Link href="/dashboard/editvc">
-              <Button className="red-button bg-red-700">Editer mon CV</Button>
+              <Button className="red-button bg-red-600  hover:bg-red-700 text-white">Editer mon CV</Button>
             </Link>
           </CardFooter>
         </Card>
