@@ -32,11 +32,11 @@ export const HeroParallax = ({
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 1], [0, 1500]),
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -1500]),
     springConfig
   );
   const rotateX = useSpring(
@@ -52,13 +52,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-500, 100]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[290vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-auto py-10 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:800px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -68,10 +68,10 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
+        className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20">
-          {firstRow.map((product) => (
+<motion.div className="flex justify-center mb-10 gap-10">
+{firstRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
@@ -136,8 +136,8 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
-    >
+      className="group/product h-96 w-full sm:w-[30rem] relative flex-shrink-0"
+      >
       <Link
         href={product.link}
         className="block group-hover/product:shadow-2xl "
