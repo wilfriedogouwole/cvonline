@@ -33,7 +33,7 @@ const user = await currentUser()
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
         <Link href="http://localhost:3000/">
-        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/09/Nouveau-projet22-2.png" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -51,7 +51,7 @@ const user = await currentUser()
         </NavbarItem>
         <NavbarBrand>
         <Link href="/">
-        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/09/Nouveau-projet22-2.png" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
 
@@ -113,7 +113,7 @@ else {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
         <Link href="http://localhost:3000/">
-        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/09/Nouveau-projet22-2.png" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -131,7 +131,7 @@ else {
         </NavbarItem>
         <NavbarBrand>
         <Link href="/">
-        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/01/Nouveau-projet22-1.png" alt="Logo" width={150} height={150} />
+        <Image src="https://derrickogouwole.fr/wp-content/uploads/2024/09/Nouveau-projet22-2.png" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
 
