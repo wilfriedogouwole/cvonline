@@ -33,7 +33,7 @@ const user = await currentUser()
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
         <Link href="http://localhost:3000/">
-        <Image src="/public/images/308115377_469497291861464_7432795680683893250_n.jpg" alt="Logo" width={150} height={150} />
+        <Image src="/images/308115377_469497291861464_7432795680683893250_n.jpg" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -113,7 +113,7 @@ else {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
         <Link href="http://localhost:3000/">
-        <Image src="/public/images/308115377_469497291861464_7432795680683893250_n.jpg" alt="Logo" width={150} height={150} />
+        <Image src="/images/308115377_469497291861464_7432795680683893250_n.jpg" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -131,7 +131,7 @@ else {
         </NavbarItem>
         <NavbarBrand>
         <Link href="/">
-        <Image src="/public/images/308115377_469497291861464_7432795680683893250_n.jpg"  alt="Logo" width={150} height={150} />
+        <Image src="/images/308115377_469497291861464_7432795680683893250_n.jpg" alt="Logo" width={150} height={150} />
           </Link>
         </NavbarBrand>
 
