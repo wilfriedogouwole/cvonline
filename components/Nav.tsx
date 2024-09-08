@@ -25,7 +25,7 @@ const user = await currentUser()
  if(!user){
 
   return (
-    <Navbar className=" flex items-center text-center justify-center" position="static" disableAnimation isBordered>
+    <Navbar className=" flex items-center text-center justify-center" position="sticky" disableAnimation isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
