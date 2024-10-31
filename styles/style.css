@@ -7,6 +7,7 @@
     padding: 20px;
     background-color: #f0f0f5;
     font-family: Arial, sans-serif;
+    
   }
   
   /* Section du formulaire */
@@ -15,7 +16,6 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 48%;
   }
   
   /* Section de prévisualisation */
@@ -24,7 +24,6 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 48%;
   }
   
   /* Titres */

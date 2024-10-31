@@ -49,7 +49,7 @@ export default function EditVC() {
   return (
     <>
     <div className="container">
-      <div className="form-section">
+      <div className="form-section md:max-w[30%] md:gap-5">
         <h2>Formulaire CV</h2>
         <Accordion>
           <AccordionItem className="text-sm" key="1" aria-label="Informations personnelles" title="Informations personnelles">
@@ -256,7 +256,7 @@ export default function EditVC() {
      
       </div>
 
-      <div className="preview-section">
+      <div className="preview-section md:min-w-[68%] md:mx-5">
         <h2>Prévisualisation du CV</h2>
         <div className="cv-card flex flex-1 ">
         
