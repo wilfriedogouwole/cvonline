@@ -261,7 +261,7 @@ export default function EditVC() {
         <div className="cv-card flex flex-1 ">
         
           <div className="cv-info bg-orange-400 px-2 ">
-          <Image src={cvData.photo} alt="Photo" width="100" height="100" className="cv-photo" />
+          <Image src={cvData.photo} alt="" width="100" height="100" className="cv-photo" />
           {/* <p>{cvData.profil}</p> 
            <Image src={"https://cdn-ilanoin.nitrocdn.com/teqXLpLIVZeOqSQxzwmkSxDOZifIFLwA/assets/images/optimized/rev-2c95817/derrickogouwole.fr/wp-content/uploads/2024/01/derrick-refaire-1-2.webp"} alt="Photo" width="70" height="70" className="cv-photo" />*/}
           <p><strong> Nom: </strong> {cvData.prenom} {cvData.nom}</p>
@@ -275,6 +275,7 @@ export default function EditVC() {
             <p><strong>Sexe:</strong> {cvData.sexe}</p>
             <p><strong>Site internet:</strong> <a href={cvData.siteWeb}>{cvData.siteWeb}</a></p>
             <p><strong>LinkedIn:</strong> <a href={cvData.linkedin}>{cvData.linkedin}</a></p>
+
             {extraFields.includes('dateNaissance') && <p><strong>Date de naissance:</strong> {cvData.dateNaissance}</p>}
             {extraFields.includes('lieuNaissance') && <p><strong>Lieu de naissance:</strong> {cvData.lieuNaissance}</p>}
             {extraFields.includes('nationalite') && <p><strong>Nationalité:</strong> {cvData.nationalite}</p>}
