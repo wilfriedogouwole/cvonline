@@ -76,8 +76,8 @@ if(userId){
   <h2 className="flex flex-col items-center justify-center text-2xl font-bold pb-6">
     Qu’est-ce qu’un Curriculum Vitae ?
   </h2>
-  <p >
-    Le CV est issu du latin <strong>Curriculum Vitae</strong> (signifiant « le déroulement de la vie »). C’est le support que tous les <strong>chercheurs d’emploi, de stage ou les étudiants</strong>, utilisent afin de se mettre en valeur devant un recruteur. Il décrit tout le <strong>parcours professionnel et de formation</strong> d’une personne. Il donne aussi quelques informations plus personnelles sur l’individu, comme l’âge, l’adresse ou bien les centres d’intérêts. Ce précieux document renseigne pertinemment les employeurs qui doivent sélectionner un futur salarié, un stagiaire ou un apprenti.
+  <p>
+    Le CV est issu du latin <strong>Curriculum Vitae</strong> (signifiant « le déroulement de la vie »). C’est le support que tous les <strong>chercheurs d’emploi, de stage ou les étudiants</strong> utilisent afin de se mettre en valeur devant un recruteur. Il décrit tout le <strong>parcours professionnel et de formation</strong> d’une personne. Il donne aussi quelques informations plus personnelles sur l’individu, comme l’âge, l’adresse ou bien les centres d’intérêts. Ce précieux document renseigne pertinemment les employeurs qui doivent sélectionner un futur salarié, un stagiaire ou un apprenti.
   </p>
   <h2 className="flex flex-col items-center justify-center text-2xl font-bold pb-6 py-4">
     Les étapes pour rédiger son CV à partir d’un de nos modèles
@@ -104,9 +104,9 @@ if(userId){
     <span className="number-listing">3- </span> Vos expériences professionnelles
   </h3>
   <p>
-    Cette section permettra au recruteur de connaître <strong>votre parcours professionnel ainsi que vos compétences</strong>. Attention à bien choisir les expériences professionnelles les plus pertinentes pour votre recherche d'emploi. Au maximum, nous vous recommandons de ne pas ajouter plus de 4 expériences différentes pour ne pas surcharger votre CV. Voici les <strong>informations à rédiger</strong> dans cette partie du Curriculum Vitae :
+    Cette section permettra au recruteur de connaître <strong>votre parcours professionnel ainsi que vos compétences</strong>. Attention à bien choisir les expériences professionnelles les plus pertinentes pour votre recherche d&rsquo;emploi. Au maximum, nous vous recommandons de ne pas ajouter plus de 4 expériences différentes pour ne pas surcharger votre CV. Voici les <strong>informations à rédiger</strong> dans cette partie du Curriculum Vitae :
   </p>
-  <ul>
+  <ul className="list-none pl-0">
     <li>les dates de début et de fin,</li>
     <li>l’intitulé du poste,</li>
     <li>le nom de l’entreprise,</li>
@@ -122,7 +122,7 @@ if(userId){
   <p>
     Les formations sont très importantes dans le CV. Certaines entreprises demandent un diplôme ou un niveau d’étude minimum pour pouvoir postuler. C’est donc dans cette rubrique que vous mettrez en avant vos diplômes obtenus. Nous vous conseillons de <strong>rédiger vos formations de manière chronologique</strong> (du plus récent au plus ancien). Cela permettra au recruteur de voir les informations les plus pertinentes en premier. Ensuite indiquez :
   </p>
-  <ul>
+  <ul className="list-none pl-0">
     <li>la date d’obtention du diplôme,</li>
     <li>le nom de l’établissement,</li>
     <li>le nom du diplôme ou de la formation,</li>
@@ -147,7 +147,7 @@ if(userId){
   <p>
     Montrez que vous vous intéressez à différentes choses pour prouver votre ouverture d’esprit. Vos centres d’intérêts peuvent en dire long sur vous. <strong>Privilégiez les loisirs qui ont un lien avec le métier recherché</strong> pour vous mettre en avant. Voici les avantages de bien rédiger cette partie :
   </p>
-  <ul>
+  <ul className="list-none pl-0">
     <li>mettre en avant votre passion pour un métier,</li>
     <li>créer un sujet de discussion lors de votre entretien d’embauche.</li>
   </ul>
