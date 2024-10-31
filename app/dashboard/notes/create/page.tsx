@@ -8,6 +8,7 @@ import { createNote } from "@/lib/actionsNotes";
 
 export default function CreatePage() {
   return (
+    <section className="flex justify-center mt-10 mb-8 flex-col sm:py-0 py-6 md:h-[80%] w-full">
     <Card>
       <form action={createNote}>
         <CardHeader>
@@ -39,5 +40,6 @@ export default function CreatePage() {
       </form>
 
     </Card>
+    </section>
   )
 }
