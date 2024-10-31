@@ -10,29 +10,15 @@ export default function Accodeon() {
       <AccordionItem
         key="1"
         aria-label="Gain de temps"
-        startContent={
-          <Avatar
-            isBordered
-            color="primary"
-            radius="md"
-            src="/images/Logo.png"
-          />
-        }
+   
         title="Gain de temps"
       >
-        {"Rédiger un CV à partir de zéro peut être chronophage. Les créateurs de CV en ligne vous permettent de créer un document professionnel en quelques minutes grâce à des modèles préconçus."}
+        {"Rédiger un CV à partir de zéro peut être chronophage. Les créateurs de CVen ligne vous permettent de créer un document professionnel en quelques minutes grâce à des modèles préconçus."}
       </AccordionItem>
       <AccordionItem
         key="2"
         aria-label="Janelle Lenard"
-        startContent={
-          <Avatar
-            isBordered
-            color="success"
-            radius="lg"
-            src="/images/Logo.png"
-          />
-        }
+    
         title="Accès à des modèles professionnels">
           
         {"Vous avez accès à une variété de modèles qui respectent les tendances actuelles et sont adaptés à différents secteurs d'activité."
@@ -42,15 +28,7 @@ export default function Accodeon() {
       <AccordionItem
         key="3"
         aria-label="Personnalisation avancée
-"
-        startContent={
-          <Avatar
-            isBordered
-            color="warning"
-            radius="lg"
-            src="/images/Logo.png"
-          />
-        }
+"          
         title="Personnalisation avancée
 "
       >
@@ -60,14 +38,7 @@ export default function Accodeon() {
         key="4"
         aria-label="Facilité d'utilisation
 "
-        startContent={
-          <Avatar
-            isBordered
-            color="warning"
-            radius="lg"
-            src="/images/Logo.png"
-          />
-        }
+      
         title="Facilité d'utilisation
 "
       >
@@ -76,14 +47,7 @@ export default function Accodeon() {
       <AccordionItem
         key="5"
         aria-label="Telechargement en PDF"
-        startContent={
-          <Avatar
-            isBordered
-            color="warning"
-            radius="lg"
-            src="/images/Logo.png"
-          />
-        }
+       
       
         title="Téléchargement en PDF"
       >
