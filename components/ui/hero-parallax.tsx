@@ -104,12 +104,12 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-6xl relative mx-auto py-20 md:py-20 px-4 w-full  left-0 top-0">
-         <h1 className="text-2xl  md:text-7xl font-bold dark:text-white">
+    <div className="md:max-w-xl max-w-6xl text-center justify-content relative mx-auto py-20 md:py-20 px-4 w-full  left-0 top-0 ">
+         <h1 className="text-2xl  md:text-7xl font-bold dark:text-white ">
        Créateur de </h1>
-      <br />  <h2 className={title({ color: "violet" })}>CV en ligne &nbsp;</h2>
+      <br />  <h2 className={title({ color: "violet" })} >CV en ligne &nbsp;</h2>
 
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 " >
       Utilisez notre créateur de CV en ligne pour concevoir un CV personnalisé en quelques minutes. Choisissez parmi des modèles professionnels, modernes et élégants. Facile, rapide et gratuit !
       </p>
     </div>

@@ -19,7 +19,7 @@ if(userId){
 
   return (
     <>
-    <section className="flex flex-col items-center justify-center gap-4 py-0 md:py-0">
+      <section className="flex flex-col items-center justify-center gap-4 py-10">
 
 <section>
 				<div className="flexStart">
