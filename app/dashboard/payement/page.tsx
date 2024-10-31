@@ -16,7 +16,7 @@ export default function PagePayement(){
           <h1 className=" flex justify-center text-3xl font-semibold">Paiement</h1>
         <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
          
-          <div className="flex  flex-col gap-6 text-center justify-center items-center">
+          <div className="flex flex-col gap-6 text-center  justify-center items-center">
             <Card x-chunk="  dashboard-04-chunk-1">
               <CardHeader>
                 <CardTitle>Offre actuelle</CardTitle>

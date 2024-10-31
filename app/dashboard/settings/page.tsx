@@ -41,7 +41,7 @@ export default  async function PageSetting() {
           
               <Image 
                 src={data?.image as string} alt="clerk logo"  
-                alt="image profil"
+                
                 className="w-16 h-16 object-contain mb-4 rounded-full" 
                 width={100}
                 height={100}
