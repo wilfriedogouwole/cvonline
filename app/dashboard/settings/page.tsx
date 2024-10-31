@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,61 +10,60 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { auth, currentUser } from "@clerk/nextjs/server";
+import { addUserToDatabase, getUserFromDatabase } from "@/service/userService";
 
 
 
-export default  function PageSetting() {
+
+export default  async function PageSetting() {
+  const {userId} = auth()
+  
+  const data= await getUserFromDatabase(userId as string);
   
   return (
     <div className="mx-auto" >
           <h1 className=" flex justify-center text-3xl font-semibold">Réglages</h1>
-        <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
+        <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr] py-10">
       
     <section className="border border-gray-200 rounded-md p-3">
 
       <p className="text-lg text-muted-foreground">Vos parametres de profil</p>
       <div className="w-12 h-[1px] bg-white my-2 mx-1"></div>
 
-      <form action="">
         <input type="hidden" name="id" value="" />
 
         <Card>
 
           <CardHeader>
             <CardTitle>Parametres globals</CardTitle>
-            <CardDescription>Modifier vos informations puis sauvegarder.</CardDescription>
           </CardHeader>
 
           <CardContent>
           
               <Image 
-                src={""} 
-                alt=""
-                className="w-16 h-16 object-contain mb-4" 
+                src={data?.image as string} alt="clerk logo"  
+                alt="image profil"
+                className="w-16 h-16 object-contain mb-4 rounded-full" 
                 width={100}
                 height={100}
               />
             
-            <div className="space-y-1 mb-2">
-              <Label htmlFor="idUser">ID</Label>
-              <Input disabled name="idUser" type="text" id="idUser" placeholder="Votre e-mail" defaultValue="" />
-            </div>
+       
             <div className="space-y-1">
-              <Label htmlFor="name">Nom</Label>
-              <Input name="name" type="text" id="name" placeholder="Votre nom" defaultValue="" />
+             <p> {data?.name}</p>
             </div>
             <div className="space-y-1 mt-2">
-              <Label htmlFor="email">Email</Label>
-              <Input disabled name="email" type="email" id="email" placeholder="Votre e-mail" defaultValue="" />
+            <p> {data?.email}</p>
+
             </div>
           </CardContent>
 
           <CardFooter>
-            <Button type="submit">Modifier</Button>
+            <Button>Connecté</Button>
           </CardFooter>
         </Card>
 
-      </form>
       {/*}
       <form action={deleteUser}>
       <input type="hidden" name="id" value={user?.id}/>

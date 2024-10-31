@@ -12,64 +12,31 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 export default function PagePayement(){
   return (
-    <div className="mx-auto" >
+    <div className="mx-auto pb-10" >
           <h1 className=" flex justify-center text-3xl font-semibold">Paiement</h1>
         <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
-          <nav
-            className="grid gap-4 text-sm text-muted-foreground" x-chunk="dashboard-04-chunk-0"
-          >
+         
+          <div className="flex  flex-col gap-6 text-center justify-center items-center">
+            <Card x-chunk="  dashboard-04-chunk-1">
+              <CardHeader>
+                <CardTitle>Offre actuelle</CardTitle>
+                <CardDescription>
+                  Montant de votre offre actuelle
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+             <p className="text-center">16euros</p>
+              </CardContent>
+              <CardFooter className="justify-center border-t px-6 py-4">
+                <Button>Changer d'offre</Button>
+              </CardFooter>
+            </Card>
+
+            </div>
            
-          </nav>
-          <div className="flex justify-center flex-col gap-6">
-            <Card x-chunk="dashboard-04-chunk-1">
-              <CardHeader>
-                <CardTitle>Store Name</CardTitle>
-                <CardDescription>
-                  Used to identify your store in the marketplace.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form>
-                  <Input placeholder="Store Name" />
-                </form>
-              </CardContent>
-              <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
-            <Card x-chunk="dashboard-04-chunk-2">
-              <CardHeader>
-                <CardTitle>Plugins Directory</CardTitle>
-                <CardDescription>
-                  The directory within your project, in which your plugins are
-                  located.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="flex flex-col gap-4">
-                  <Input
-                    placeholder="Project Name"
-                    defaultValue="/content/plugins"
-                  />
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="include" defaultChecked />
-                    <label
-                      htmlFor="include"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Allow administrators to change the directory.
-                    </label>
-                  </div>
-                </form>
-              </CardContent>
-              <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
-              </CardFooter>
-            </Card>
             
           </div>
         </div>
-    </div>
   )
 
   }
