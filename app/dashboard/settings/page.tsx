@@ -26,20 +26,18 @@ export default  async function PageSetting() {
           <h1 className=" flex justify-center text-3xl font-semibold">Réglages</h1>
         <div className="pt-8 flex justify-center items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr] py-10">
       
-    <section className="border border-gray-200 rounded-md p-3">
+    <section className="border border-gray-200 rounded-md p-3 flex flex-col justify-center items-center">
 
       <p className="text-lg text-muted-foreground">Vos parametres de profil</p>
       <div className="w-12 h-[1px] bg-white my-2 mx-1"></div>
 
-        <input type="hidden" name="id" value="" />
+        <Card className="flex flex-col justify-center items-center">
 
-        <Card>
-
-          <CardHeader>
+          <CardHeader >
             <CardTitle>Parametres globals</CardTitle>
           </CardHeader>
 
-          <CardContent>
+          <CardContent  className="flex flex-col justify-center items-center">
           
               <Image 
                 src={data?.image as string} alt="clerk logo"  
