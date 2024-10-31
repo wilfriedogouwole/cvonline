@@ -63,11 +63,12 @@ if(userId){
     </section>
     <section className="flex w-full">
        {/*} <LampDemo/>*/}
-						<Section2 />
 					
 			</section>
 
       <section>
+      <Section2 />
+
 						<PrixPage />
 			</section>
 

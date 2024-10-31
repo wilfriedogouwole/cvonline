@@ -14,8 +14,8 @@ export default function Accodeon() {
           <Avatar
             isBordered
             color="primary"
-            radius="lg"
-            src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
+            radius="md"
+            src="/images/Logo.png"
           />
         }
         title="Gain de temps"
@@ -30,7 +30,7 @@ export default function Accodeon() {
             isBordered
             color="success"
             radius="lg"
-            src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
+            src="/images/Logo.png"
           />
         }
         title="Accès à des modèles professionnels">
@@ -48,7 +48,7 @@ export default function Accodeon() {
             isBordered
             color="warning"
             radius="lg"
-            src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
+            src="/images/Logo.png"
           />
         }
         title="Personnalisation avancée
@@ -65,7 +65,7 @@ export default function Accodeon() {
             isBordered
             color="warning"
             radius="lg"
-            src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
+            src="/images/Logo.png"
           />
         }
         title="Facilité d'utilisation
@@ -81,7 +81,7 @@ export default function Accodeon() {
             isBordered
             color="warning"
             radius="lg"
-            src="https://derrickogouwole.fr/wp-content/uploads/2024/04/cropped-Nouveau-projet22-2-1-1.png"
+            src="/images/Logo.png"
           />
         }
       
