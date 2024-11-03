@@ -8,8 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 export default function PagePayement(){
   return (
     <div className="mx-auto pb-10" >
@@ -28,7 +26,7 @@ export default function PagePayement(){
              <p className="text-center">16euros</p>
               </CardContent>
               <CardFooter className="justify-center border-t px-6 py-4">
-                <Button>Changer d'offre</Button>
+                <Button>Changer d&#39;offre</Button>
               </CardFooter>
             </Card>
 
