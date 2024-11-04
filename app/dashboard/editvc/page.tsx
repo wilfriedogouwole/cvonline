@@ -23,7 +23,7 @@ export default  function Pagemodel() {
 
 return (
   <div className="container mx-auto px-4 max-w-5xl">
-    
+    <h1 className="text-center text-4xl font-bold text-red-950 bg-white">Choisissez votre modèle</h1>
     <div className="container mx-auto p-4">
       {/* First Section: Two Cards */}
       <div className="grid md:grid-cols-3 gap-6 mb-6">
