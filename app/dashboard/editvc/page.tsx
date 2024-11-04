@@ -1,5 +1,5 @@
 import React from 'react'
-import Cardmodel from '@/app/components/cardmodel'
+import Cardmodel from '@/components/Cardmodel'
 export default function page() {
   return (
     <div>
