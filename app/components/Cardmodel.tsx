@@ -1,91 +1,101 @@
-import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+"use client";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { addUserToDatabase, getUserFromDatabase } from "@/service/userService";
+import { auth, currentUser } from "@clerk/nextjs/server";
+import Image from "next/image";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function App() {
-  return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
-      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-        <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
-      </CardHeader>
-      <Image
-        removeWrapper
-        alt="Card background"
-        className="z-0 w-full h-full object-cover"
-        src="/images/cv1.jpg"
-      />
-    </Card>
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
-      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
-        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
-      </CardHeader>
-      <Image
-        removeWrapper
-        alt="Card background"
-        className="z-0 w-full h-full object-cover"
-        src="/images/cv2.jpg"
-      />
-    </Card>
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
-      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">Supercharged</p>
-        <h4 className="text-white font-medium text-large">Creates beauty like a beast</h4>
-      </CardHeader>
-      <Image
-        removeWrapper
-        alt="Card background"
-        className="z-0 w-full h-full object-cover"
-        src="/images/cv3.jpg"
-      />
-    </Card>
-    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
-      <CardHeader className="absolute z-10 top-1 flex-col items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-        <h4 className="text-black font-medium text-2xl">Acme camera</h4>
-      </CardHeader>
-      <Image
-        removeWrapper
-        alt="Card example background"
-        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-        src="/images/cv4.jpg"
-      />
-      <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-        <div>
-          <p className="text-black text-tiny">Available soon.</p>
-          <p className="text-black text-tiny">Get notified.</p>
-        </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
-      </CardFooter>
-    </Card>
-    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
-      <CardHeader className="absolute z-10 top-1 flex-col items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
-        <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
-      </CardHeader>
-      <Image
-        removeWrapper
-        alt="Relaxing app background"
-        className="z-0 w-full h-full object-cover"
-        src="/images/cv5.jpg"
-      />
-      <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-        <div className="flex flex-grow gap-2 items-center">
-          <Image
-            alt="Breathing app icon"
-            className="rounded-full w-10 h-11 bg-black"
-            src="/images/lettre1.jpg"
-          />
-          <div className="flex flex-col">
-            <p className="text-tiny text-white/60">Breathing App</p>
-            <p className="text-tiny text-white/60">Get a good night's sleep.</p>
-          </div>
-        </div>
-        <Button radius="full" size="sm">Get App</Button>
-      </CardFooter>
-    </Card>
+
+
+export default  function Pagemodel() {
+
+
+{/* const del= await deleteUserFromDatabase(userId);*/}
+
+return (
+  <div className="container mx-auto px-4 max-w-5xl">
+    
+    <div className="container mx-auto p-4">
+      {/* First Section: Two Cards */}
+      <div className="grid md:grid-cols-3 gap-6 mb-6">
+        <Card>
+          <CardHeader>
+            <Image src="/images/cv5.jpg" alt="clerk logo" width={866} height={866} />
+          </CardHeader>
+          <CardContent></CardContent>
+          <CardFooter className="flex justify-center items-center border-t px-6 py-4">
+            <Link href="#">
+              <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
+                Editer
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+        
+        <Card>
+          <CardHeader>
+            <Image src="/images/cv2.jpg" alt="clerk logo" width={866} height={866} />
+          </CardHeader>
+          <CardContent></CardContent>
+          <CardFooter className="flex justify-center items-center border-t px-6 py-4">
+            <Link href="#">
+              <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
+                Editer
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <Image src="/images/cv3.jpg" alt="clerk logo" width={866} height={866} />
+          </CardHeader>
+          <CardContent></CardContent>
+          <CardFooter className="flex justify-center items-center border-t px-6 py-4">
+            <Link href="#">
+              <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
+                Editer
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+
+
+  
+
+
+      </div>
+
+      {/* Second Section: Account Deletion Card */}
+      <div className="grid grid-cols-1">
+      <Card>
+          <CardHeader>
+            <Image src="/images/cv1.jpg" alt="clerk logo" width={866} height={866} />
+            <CardDescription className="text-center text-2xl text-white">Le plus utilisé</CardDescription>
+
+          </CardHeader>
+          <CardContent></CardContent>
+          <CardFooter className="flex justify-center items-center border-t px-6 py-4">
+            <Link href="#">
+              <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
+                Editer
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
   </div>
-  );
-}
+)
+
+    }
