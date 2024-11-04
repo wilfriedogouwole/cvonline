@@ -50,6 +50,14 @@ remotePatterns: [
 
 {
   protocol: "https",
+  hostname: "nextui.org/",
+  pathname: "**",  
+
+},
+
+
+{
+  protocol: "https",
   hostname: "mail.google.com",
   pathname: "**",  
 
