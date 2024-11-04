@@ -19,8 +19,6 @@ import { redirect } from "next/navigation";
 export default  function Pagemodel() {
 
 
-{/* const del= await deleteUserFromDatabase(userId);*/}
-
 return (
   <div className="container mx-auto px-4 max-w-5xl">
     <h1 className="text-center text-4xl font-bold text-red-950 bg-white">Choisissez votre modèle</h1>
@@ -68,10 +66,6 @@ return (
             </Link>
           </CardFooter>
         </Card>
-
-
-  
-
 
       </div>
 
