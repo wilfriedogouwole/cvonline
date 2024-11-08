@@ -1,10 +1,11 @@
 "use client";
 import "@/styles/style.css";
 import { Accordion, AccordionItem, Button } from "@nextui-org/react";
-import { CirclePlus } from "lucide-react";
+import { CirclePlus, Globe, Mail, MapPin, Phone } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import { useState } from 'react';
+
 
 // Dynamically import TextEditor with SSR disabled
 const TextEditor = dynamic(() => import("@/components/TextEditor"), { ssr: false });
@@ -283,17 +284,73 @@ PROFIL        </h2>
           {/* Colonne 2 */}
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
             <h3 className="text-SM font-semibold text-pink-700">COORDONNEES</h3>
-            <p className="mt-2 text-gray-700">
-              Contenu de la deuxième colonne. Mettez des détails supplémentaires ici.
-            </p>
+            
+            <ul className="mt-4 space-y-3">
+              {/* Ville */}
+              <li className="flex items-center">
+                <MapPin className="w-3 h-3 text-pink-600 mr-3" />
+                <span  className="text-black">{cvData.ville}</span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <Phone className="w-3 h-3 text-pink-600 mr-3" />
+                <span  className="text-black">{cvData.telephone}</span>
+              </li>
+
+              {/* Adresse Email */}
+              <li className="flex items-center">
+                <Mail className="w-3 h-3 text-pink-600 mr-3" />
+                <span  className="text-black">{cvData.email}</span>
+              </li>
+
+              {/* Site internet */}
+              <li className="flex items-center">
+                <Globe className="w-3 h-3 text-pink-600 mr-3" />
+                <span className="text-black"><a href={cvData.siteWeb}>{cvData.siteWeb}</a></span>
+              </li>
+
+         
+            </ul>
           </div>
 
           {/* Colonne 3 */}
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
             <h3 className="text-sm font-semibold text-pink-700">CENTRE D'INTERET</h3>
-            <p className="mt-2 text-gray-700">
-              Contenu de la troisième colonne. Ajoutez des informations pertinentes.
-            </p>
+            <ul className="mt-0 space-y-0 list-disc">
+              {/* Ville */}
+              <li className="flex items-center list-disc py-[-50px]">
+                <span  className="text-black text-sm list-disc ">centre1</span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <span  className="text-black text-sm">centre2</span>
+              </li>
+
+              {/* Adresse Email */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">centre3</span>
+              </li>
+
+              {/* Site internet */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">centre4 </span>
+              </li>
+              </ul>
+              <h3 className="text-sm font-semibold text-pink-700">LANGUE</h3>
+              <ul className="mt-0 space-y-0 list-disc">
+              {/* Ville */}
+              <li className="flex items-center list-disc">
+                <span  className="text-black list-disc text-sm">Français: </span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">Anglais :</span>
+              </li>
+              </ul>
+           
           </div>
         </div>
       </section>
@@ -302,12 +359,6 @@ PROFIL        </h2>
           <Image src={cvData.photo} alt="" width="100" height="100" className="cv-photo" />
           {/* <p>{cvData.profil}</p> 
            <Image src={"https://cdn-ilanoin.nitrocdn.com/teqXLpLIVZeOqSQxzwmkSxDOZifIFLwA/assets/images/optimized/rev-2c95817/derrickogouwole.fr/wp-content/uploads/2024/01/derrick-refaire-1-2.webp"} alt="Photo" width="70" height="70" className="cv-photo" />*/}
-          <p><strong> Nom: </strong> {cvData.prenom} {cvData.nom}</p>
-            <p><strong>Email:</strong> {cvData.email}</p>
-            <p><strong>Téléphone:</strong> {cvData.telephone}</p>
-            <p><strong>Adresse:</strong> {cvData.adresse}</p>
-            <p><strong>Ville:</strong>  {cvData.ville}</p>
-            <p><strong>Code Postale:</strong>   {cvData.codePostal}</p>
 
             <p><strong>Permis:</strong> {cvData.permis}</p>
             <p><strong>Sexe:</strong> {cvData.sexe}</p>
