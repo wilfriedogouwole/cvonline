@@ -1,4 +1,5 @@
 "use client";
+import { Separator } from "@/components/ui/separator";
 import "@/styles/style.css";
 import { Accordion, AccordionItem, Button } from "@nextui-org/react";
 import { CirclePlus, Globe, Mail, MapPin, Phone } from "lucide-react";
@@ -356,15 +357,123 @@ PROFIL        </h2>
       </section>
         
       <section className="flex mt-5 p-6 bg-white p-6 shadow-lg rounded-lg">
+
       <div className="flex-1 p-4 bg-lightblue">
-        <p>Contenu de la première colonne, qui prend toute la section.</p>
+      <h3 className="text-sm font-semibold text-pink-700"> EXPERIENCES</h3>
+<div className="pb-3">
+      <h5 className="text-sm font-semibold text-black pt-2"> Poste 1</h5>
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Contenu de la première 
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+         <p className="text-sm font-semibold text-black pt-2" >Description du poste </p>
+         <h6 className="text-sm font-semibold text-pink-700">compétences</h6>
+              <ul className="mt-0 space-y-0 list-disc">
+              {/* Ville */}
+              <li className="flex items-center list-disc">
+                <span  className="text-black list-disc text-sm">1: </span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">2 :</span>
+              </li>
+              </ul>
+  </div>
+
+  < Separator />
+
+
+
+  <div className="pb-3">
+      <h5 className="text-sm font-semibold text-black pt-5"> Poste 2</h5>
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Contenu de la première 
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+         <p className="text-sm font-semibold text-black pt-2" >Description du poste </p>
+         <h6 className="text-sm font-semibold text-pink-700">compétences</h6>
+              <ul className="mt-0 space-y-0 list-disc">
+              {/* Ville */}
+              <li className="flex items-center list-disc">
+                <span  className="text-black list-disc text-sm">1: </span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">2 :</span>
+              </li>
+              </ul>
+  </div>
+  < Separator />
+
+
+  <div>
+      <h5 className="text-sm font-semibold text-black pt-5"> Poste 3</h5>
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Contenu de la première 
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+         <p className="text-sm font-semibold text-black pt-2" >Description du poste </p>
+         <h6 className="text-sm font-semibold text-pink-700">compétences</h6>
+              <ul className="mt-0 space-y-0 list-disc">
+              {/* Ville */}
+              <li className="flex items-center list-disc">
+                <span  className="text-black list-disc text-sm">1: </span>
+              </li>
+
+              {/* Téléphone */}
+              <li className="flex items-center">
+                <span  className="text-black list-disc text-sm">2 :</span>
+              </li>
+              </ul>
+  </div>
+
       </div>
       <div className="w-80 flex flex-col gap-5 p-4 bg-lightgreen">
-        <div className="p-3 bg-white border border-gray-300">
-          <p>Contenu de la première ligne de la deuxième colonne.</p>
-        </div>
-        <div className="p-3 bg-white border border-gray-300">
-          <p>Contenu de la deuxième ligne de la deuxième colonne.</p>
+      <h3 className="text-sm font-semibold text-pink-700"> FORMATIONS</h3>
+
+        <div className="p-3 bg-[#f9eee0] border border-pink-300  mt-[-17px] flex flex-col justify-between gap-2">
+        <div>
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Formation 1
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+    
+  </div>
+
+  <div className="pt-5">
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Formation 2 
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+ 
+  </div>
+
+
+  <div className="pt-5">
+      <div className="flex justify-between gap-2">
+      <p className="text-sm font-semibold text-black">Formation 3
+      </p>
+      <span className="text-sm items-end font-semibold text-black">2024-2025</span>
+      </div>  
+ 
+  </div>
+
+
+
+
+  </div>
+
+        <h3 className="text-sm font-semibold text-pink-700"> COMPETENCES</h3>
+
+        <div className="p-3 bg-[#f9eee0] border border-pink-300 mt-[-17px] ">
+          <p className="text-sm font-semibold text-black">Contenu de la deuxième ligne de la deuxième colonne.</p>
         </div>
       </div>
     </section>
