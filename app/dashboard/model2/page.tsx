@@ -258,7 +258,45 @@ export default function EditVC() {
 
       <div className="preview-section md:min-w-[68%] md:mx-5">
         <h2>Prévisualisation du CV</h2>
-        <div className="cv-card flex flex-1 ">
+        <div className="min-h-screen bg-pink-100 flex justify-center items-center">
+        <div className="bg-pink-100 w-[800px] p-8 shadow-lg rounded-lg">
+<div>
+<header className="text-center">
+          <h1 className="text-3xl font-bold text-pink-700"><p><strong> {cvData.prenom} {cvData.nom}</strong> </p>
+          </h1>
+          <p className="text-xl text-gray-700 py-4 " >Directrice Artistique</p>
+        </header>
+</div>
+
+<section className="bg-white p-6 shadow-lg rounded-lg">
+        <h2 className="text-2xl font-bold text-center text-pink-600 mb-6">
+PROFIL        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Colonne 1 */}
+          <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
+            <h3 className="text-SM font-semibold text-pink-700">PHOTO</h3>
+            <p className="mt-2 text-gray-700">
+            <Image src={cvData.photo} alt="" width="100" height="100" className="" />
+            </p>
+          </div>
+
+          {/* Colonne 2 */}
+          <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
+            <h3 className="text-SM font-semibold text-pink-700">COORDONNEES</h3>
+            <p className="mt-2 text-gray-700">
+              Contenu de la deuxième colonne. Mettez des détails supplémentaires ici.
+            </p>
+          </div>
+
+          {/* Colonne 3 */}
+          <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
+            <h3 className="text-sm font-semibold text-pink-700">CENTRE D'INTERET</h3>
+            <p className="mt-2 text-gray-700">
+              Contenu de la troisième colonne. Ajoutez des informations pertinentes.
+            </p>
+          </div>
+        </div>
+      </section>
         
           <div className="cv-info bg-orange-400 px-2 ">
           <Image src={cvData.photo} alt="" width="100" height="100" className="cv-photo" />
@@ -310,6 +348,7 @@ Formation              </h3>
         </main>
         </div>
       </div>
+    </div>
     </div>
     </>
   );
