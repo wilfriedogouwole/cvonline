@@ -493,50 +493,7 @@ PROFIL        </h2>
 <p className="pt-3"> <Slider defaultValue={[0]} max={100} step={1} /></p>        </div>
       </div>
     </section>
-
-
-          <div className="cv-info bg-orange-400 px-2 ">
-          <Image src={cvData.photo} alt="" width="100" height="100" className="cv-photo" />
-          {/* <p>{cvData.profil}</p> 
-           <Image src={"https://cdn-ilanoin.nitrocdn.com/teqXLpLIVZeOqSQxzwmkSxDOZifIFLwA/assets/images/optimized/rev-2c95817/derrickogouwole.fr/wp-content/uploads/2024/01/derrick-refaire-1-2.webp"} alt="Photo" width="70" height="70" className="cv-photo" />*/}
-
-            <p><strong>Permis:</strong> {cvData.permis}</p>
-            <p><strong>Sexe:</strong> {cvData.sexe}</p>
-            <p><strong>Site internet:</strong> <a href={cvData.siteWeb}>{cvData.siteWeb}</a></p>
-            <p><strong>LinkedIn:</strong> <a href={cvData.linkedin}>{cvData.linkedin}</a></p>
-
-            {extraFields.includes('dateNaissance') && <p><strong>Date de naissance:</strong> {cvData.dateNaissance}</p>}
-            {extraFields.includes('lieuNaissance') && <p><strong>Lieu de naissance:</strong> {cvData.lieuNaissance}</p>}
-            {extraFields.includes('nationalite') && <p><strong>Nationalité:</strong> {cvData.nationalite}</p>}
-            {extraFields.includes('etatCivil') && <p><strong>État civil:</strong> {cvData.etatCivil}</p>}
-          </div>
-
-          <main className="flex  bg-white shadow-md flex-col p-2 lg:gap-2 lg:p-2">
-          <div className="flex items-center">
-            <h1 className="text-lg font-semibold md:text-xl "> {cvData.prenom} {cvData.nom}
-            </h1>
-          </div>
-          <div
-            className="flex flex-col gap-5  rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1"
-          >
-            <div className="flex flex-col gap-1 text-center">
-              <h3 className="text-md font-bold tracking-tight text-start text-slate-700">
-                Profil              </h3>
-                <p className="text-sm text-justify text-muted-foreground">
-                {cvData.motivation}
-              </p>      
-            </div>
-            <div className="flex flex-col gap-1 text-center">
-              <h3 className="text-md font-bold tracking-tight text-start text-slate-700" >
-Formation              </h3>
-              <p className="text-sm text-justify text-muted-foreground">
-           
-              {`Autonome et enthousiaste, mes premières expériences m'ont permis de renforcer mes acquis et d'appréhender les différents outils et techniques dans la gestion de projet digital. En quête de nouveaux challenges, je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme et mon goût du challenge.`}
-
-     </p>
-     </div>
-          </div>
-        </main>
+        
         </div>
       </div>
     </div>
