@@ -355,6 +355,21 @@ PROFIL        </h2>
         </div>
       </section>
         
+      <section className="flex mt-5 p-6 bg-white p-6 shadow-lg rounded-lg">
+      <div className="flex-1 p-4 bg-lightblue">
+        <p>Contenu de la première colonne, qui prend toute la section.</p>
+      </div>
+      <div className="w-80 flex flex-col gap-5 p-4 bg-lightgreen">
+        <div className="p-3 bg-white border border-gray-300">
+          <p>Contenu de la première ligne de la deuxième colonne.</p>
+        </div>
+        <div className="p-3 bg-white border border-gray-300">
+          <p>Contenu de la deuxième ligne de la deuxième colonne.</p>
+        </div>
+      </div>
+    </section>
+
+
           <div className="cv-info bg-orange-400 px-2 ">
           <Image src={cvData.photo} alt="" width="100" height="100" className="cv-photo" />
           {/* <p>{cvData.profil}</p> 
