@@ -1,7 +1,7 @@
 "use client";
 import { Separator } from "@/components/ui/separator";
 import "@/styles/style.css";
-import { Accordion, AccordionItem, Button } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button, Slider } from "@nextui-org/react";
 import { CirclePlus, Globe, Mail, MapPin, Phone } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
@@ -12,6 +12,17 @@ import { useState } from 'react';
 const TextEditor = dynamic(() => import("@/components/TextEditor"), { ssr: false });
 
 export default function EditVC() {
+
+  const colors = [
+    "foreground",
+    "primary",
+    "secondary",
+    "success",
+    "warning",
+    "danger",
+  ];
+
+
   const [cvData, setCvData] = useState({
     photo: '',
     prenom: '',
@@ -473,6 +484,21 @@ PROFIL        </h2>
         <h3 className="text-sm font-semibold text-pink-700"> COMPETENCES</h3>
 
         <div className="p-3 bg-[#f9eee0] border border-pink-300 mt-[-17px] ">
+        <div className="flex flex-col gap-6 w-full max-w-md">
+      {colors.map((color) => (
+        <Slider
+          key={color}
+          color={color}
+          step={0.01}
+          maxValue={1}
+          minValue={0}
+          defaultValue={0.7}
+          aria-label="Temperature"
+          className="max-w-md"
+        />
+      ))}
+    </div>
+
           <p className="text-sm font-semibold text-black">Contenu de la deuxième ligne de la deuxième colonne.</p>
         </div>
       </div>
