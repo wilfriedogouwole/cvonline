@@ -106,26 +106,8 @@ export default function EditVC() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="input-group">
-                <label htmlFor="adresse">Adresse:</label>
-                <input
-                  type="text"
-                  id="adresse"
-                  name="adresse"
-                  value={cvData.adresse}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <label htmlFor="codePostal">Code postal:</label>
-                <input
-                  type="text"
-                  id="codePostal"
-                  name="codePostal"
-                  value={cvData.codePostal}
-                  onChange={handleInputChange}
-                />
-              </div>
+       
+          
               <div className="input-group">
                 <label htmlFor="ville">Ville:</label>
                 <input
@@ -146,16 +128,7 @@ export default function EditVC() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="input-group">
-                <label htmlFor="sexe">Sexe:</label>
-                <input
-                  type="text"
-                  id="sexe"
-                  name="sexe"
-                  value={cvData.sexe}
-                  onChange={handleInputChange}
-                />
-              </div>
+      
               <div className="input-group">
                 <label htmlFor="siteWeb">Site internet:</label>
                 <input
@@ -166,16 +139,7 @@ export default function EditVC() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="input-group">
-                <label htmlFor="linkedin">LinkedIn:</label>
-                <input
-                  type="url"
-                  id="linkedin"
-                  name="linkedin"
-                  value={cvData.linkedin}
-                  onChange={handleInputChange}
-                />
-              </div>
+           
 
               {extraFields.includes('dateNaissance') && (
                 <div className="input-group">
@@ -276,10 +240,10 @@ export default function EditVC() {
 PROFIL        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Colonne 1 */}
-          <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
+          <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center  justify-center">
             <h3 className="text-SM font-semibold text-pink-700">PHOTO</h3>
-            <p className="mt-2 text-gray-700">
-            <Image src={cvData.photo} alt="" width="100" height="100" className="" />
+            <p className="mt-2 text-gray-700 flex justify-center items-center">
+            <Image src="/images/cv1.jpg" alt="" width="100" height="100" className="flex justify-center items-center" />
             </p>
           </div>
 
@@ -493,7 +457,7 @@ PROFIL        </h2>
 <p className="pt-3"> <Slider defaultValue={[0]} max={100} step={1} /></p>        </div>
       </div>
     </section>
-        
+
         </div>
       </div>
     </div>
