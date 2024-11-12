@@ -243,7 +243,7 @@ PROFIL        </h2>
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center  justify-center">
             <h3 className="text-SM font-semibold text-pink-700">PHOTO DE TEST</h3>
             <p className="mt-2 text-gray-700 flex justify-center items-center">
-            <Image src="/images/Photo_profil.jpg" alt="" width="100" height="100" className="flex justify-center items-center" />
+            <Image src="/images/Photo_profil.jpg" alt="" width="150" height="150" className="flex justify-center items-center rounded-full" />
             </p>
           </div>
 
