@@ -238,6 +238,8 @@ export default function EditVC() {
 <section className="bg-white p-6 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-center text-pink-600 mb-6">
 PROFIL        </h2>
+
+                <p className="items-center text-black justify-center mx-auto ">{cvData.motivation}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Colonne 1 */}
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center  justify-center">
