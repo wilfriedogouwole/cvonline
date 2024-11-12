@@ -282,7 +282,7 @@ PROFIL        </h2>
 
           {/* Colonne 3 */}
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center">
-            <h3 className="text-sm font-semibold text-pink-700">CENTRE D INTERET</h3>
+            <h3 className="text-sm font-semibold text-pink-700">CENTRE D&apos; INTERET</h3>
             <ul className="mt-0 space-y-0 list-disc">
               {/* Ville */}
               <li className="flex items-center list-disc py-[-50px]">
