@@ -14,7 +14,7 @@ const TextEditor = dynamic(() => import("@/components/TextEditor"), { ssr: false
 
 export default function EditVC() {
   const [cvData, setCvData] = useState({
-    photo: '',
+    photo:'',
     prenom: '',
     nom: '',
     email: '',
@@ -45,6 +45,17 @@ export default function EditVC() {
     }));
   };
 
+
+  const handlFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setCvData(prevData => ({
+        ...prevData,
+        photo: file ? URL.createObjectURL(file) : ''
+      }));
+    }
+    };
+
   const addField = (fieldType: string) => {
     setExtraFields(prevFields => [...prevFields, fieldType]);
   };
@@ -61,9 +72,10 @@ export default function EditVC() {
                 <label htmlFor="photo">Photo:</label>
                 <input
                   type="file"
+                  accept="image/*"
                   id="photo"
                   name="photo"
-                  onChange={handleInputChange}
+                   onChange={handlFileChange}
                 />
               </div>
               <div className="input-group">
@@ -245,7 +257,10 @@ PROFIL        </h2>
           <div className="bg-pink-100 p-4 rounded-lg shadow-md text-center  justify-center">
             <h3 className="text-SM font-semibold text-pink-700">PHOTO DE TEST</h3>
             <p className="mt-2 text-gray-700 flex justify-center items-center">
-            <Image src="/images/Photo_profil.jpg" alt="" width="150" height="150" className="flex justify-center items-center rounded-full" />
+              {cvData.photo && (
+                <img src={cvData.photo} alt="upload" width="150" height="150" className="flex justify-center items-center rounded-full" />
+              )}
+           {/*<Image src="/images/Photo_profil.jpg" alt="" width="150" height="150" className="flex justify-center items-center rounded-full" />*/} 
             </p>
           </div>
 
