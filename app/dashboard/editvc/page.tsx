@@ -31,7 +31,7 @@ return (
           </CardHeader>
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
-            <Link href="#">
+            <Link href="/dashboard/model2">
               <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
                 Editer
               </Button>
@@ -45,7 +45,7 @@ return (
           </CardHeader>
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
-            <Link href="#">
+            <Link href="/dashboard/model2">
               <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
                 Editer
               </Button>
@@ -59,7 +59,7 @@ return (
           </CardHeader>
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
-            <Link href="#">
+            <Link href="/dashboard/model2">
               <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
                 Editer
               </Button>
@@ -79,7 +79,7 @@ return (
           </CardHeader>
           <CardContent></CardContent>
           <CardFooter className="flex justify-center items-center border-t px-6 py-4">
-            <Link href="#">
+            <Link href="/dashboard/model2">
               <Button className="red-button bg-red-600 hover:bg-red-700 text-white">
                 Editer
               </Button>

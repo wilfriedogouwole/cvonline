@@ -40,13 +40,13 @@ const user = await currentUser()
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-          Exemple de CV
+          <Link color="foreground" href="/dashboard/editvc">
+          Editer votre CV
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page" color="warning">
-          Exemple lettre de motivation
+          <Link href="/dashboard/lettre" aria-current="page" color="warning">
+          Lettre de motivation
           </Link>
         </NavbarItem>
         <NavbarBrand>
@@ -120,13 +120,13 @@ else {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-          Exemple de CV
+          <Link color="foreground" href="/dashboard/editvc">
+          Editer votre CV
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page" color="warning">
-          Exemple lettre de motivation
+          <Link href="/dashboard/lettre" aria-current="page" color="warning">
+          Lettre de motivation
           </Link>
         </NavbarItem>
         <NavbarBrand>

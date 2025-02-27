@@ -171,4 +171,45 @@
     }
   }
   
+  
+  
+  /* Ajoutez ces styles à votre CSS pour formater correctement la lettre */
+
+.lettre-motivation {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #333;
+}
+
+.expediteur {
+  margin-bottom: 20px;
+}
+
+.date {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.destinataire {
+  margin-bottom: 20px;
+}
+
+.objet {
+  margin-bottom: 30px;
+}
+
+.signature {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+}
 
